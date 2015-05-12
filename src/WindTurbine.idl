@@ -1,0 +1,8 @@
+struct WindTurbine {
+	long										 id;
+    float							             orientation;
+    float                                        bladePitch;
+    float										 RPM;
+    float										 temperature;
+    float										 production;
+};
