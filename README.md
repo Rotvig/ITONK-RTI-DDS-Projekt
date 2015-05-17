@@ -1,3 +1,3 @@
 # ITONK-RTI-DDS-Projekt
-ITONK RTI DDS Projekt
-This is our awesome DDS projekt where we have been using RTIconnects libary
+ITONK RTI DDS Project
+This is our awesome DDS project where we are using the RTI connexts API
