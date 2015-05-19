@@ -1,7 +1,7 @@
-package onk.grp2.WindTurbine.main;
+package com.onk.grp2.WindTurbine.main;
 
-import onk.grp2.WindTurbine.utilities.WindTurbinePublisher;
-import onk.grp2.WindTurbine.utilities.WindTurbineSubscriber;
+import com.onk.grp2.WindTurbine.utilities.WindTurbinePublisher;
+import com.onk.grp2.WindTurbine.utilities.WindTurbineSubscriber;
 
 public class WindTurbineMain {
 	public static void main(String[] args) {

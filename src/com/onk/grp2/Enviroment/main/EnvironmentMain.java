@@ -1,4 +1,4 @@
-package onk.grp2.Enviroment.main;
+package com.onk.grp2.Enviroment.main;
 
 import onk.grp2.WindTurbine.utilities.WindTurbinePublisher;
 import onk.grp2.WindTurbine.utilities.WindTurbineSubscriber;

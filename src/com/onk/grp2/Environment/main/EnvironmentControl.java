@@ -1,4 +1,4 @@
-package onk.grp2.Environment.main;
+package com.onk.grp2.Environment.main;
 
 public interface EnvironmentControl extends Runnable, EnvironmentEvent {
 

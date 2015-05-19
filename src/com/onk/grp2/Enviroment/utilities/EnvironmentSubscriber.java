@@ -1,4 +1,4 @@
-package onk.grp2.Enviroment.utilities;
+package com.onk.grp2.Enviroment.utilities;
 
 import java.io.Closeable;
 import java.io.IOException;
