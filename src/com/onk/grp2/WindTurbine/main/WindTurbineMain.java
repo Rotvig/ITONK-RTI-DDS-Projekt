@@ -10,12 +10,12 @@ public class WindTurbineMain {
         
         if (args.length >= 1) {
             domainId = Integer.valueOf(args[0]).intValue();
-        }      
+        }
         
         WindTurbinePublisher publisher = WindTurbinePublisher.INSTANCE;        
-        publisher.Initialize(2, "WindTurbineStatus");
+        publisher.Initialize(domainId, "WindTurbineStatus");
         WindTurbineSubscriber subscriber = WindTurbineSubscriber.INSTANCE;
-        subscriber.Initialize("Wind", 1);
+        subscriber.Initialize("EnvironmentStatus", domainId);
         
         (new Thread(new WindTurbineControlImpl(publisher, subscriber))).start();    
 
