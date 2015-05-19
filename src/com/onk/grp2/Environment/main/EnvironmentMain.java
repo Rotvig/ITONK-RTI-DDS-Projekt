@@ -1,7 +1,7 @@
-package onk.grp2.Environment.main;
+package com.onk.grp2.Environment.main;
 
-import onk.grp2.Environment.utilities.EnvironmentPublisher;
-import onk.grp2.Environment.utilities.EnvironmentSubscriber;
+import com.onk.grp2.WindTurbine.utilities.WindTurbinePublisher;
+import com.onk.grp2.WindTurbine.utilities.WindTurbineSubscriber;
 
 public class EnvironmentMain {
 	public static void main(String[] args) {

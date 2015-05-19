@@ -1,4 +1,0 @@
-struct Environment {
-	float										 windSpeed;
-    float							             windDirection;
-};
