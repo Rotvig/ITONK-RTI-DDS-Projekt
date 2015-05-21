@@ -1,7 +1,7 @@
 package com.onk.grp2.Environment.main;
 
-import com.onk.grp2.Environment.utilities.EnvironmentPublisher;
-import com.onk.grp2.Environment.utilities.EnvironmentSubscriber;
+import com.onk.grp2.Common.utilities.EnvironmentPublisher;
+import com.onk.grp2.Common.utilities.EnvironmentSubscriber;
 
 public class EnvironmentMain {
 	public static void main(String[] args) {

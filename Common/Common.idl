@@ -1,0 +1,13 @@
+struct Environment {
+	float										 windSpeed;
+    float							             windDirection;
+}; //@top-level
+
+struct WindTurbine {
+	long										 id;
+    float							             orientation;
+    float                                        bladePitch;
+    float										 RPM;
+    float										 temperature;
+    float										 production;
+}; //@top-level
