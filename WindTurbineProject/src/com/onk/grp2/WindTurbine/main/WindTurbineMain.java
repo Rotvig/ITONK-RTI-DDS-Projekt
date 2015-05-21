@@ -20,7 +20,9 @@ public class WindTurbineMain {
         EnvironmentSubscriber subscriber = EnvironmentSubscriber.INSTANCE;
         WindTurbineMeasurere measurere = WindTurbineMeasurereImpl.INSTANCE;
         subscriber.Initialize("EnvironmentStatus", domainId, measurere);
-        (new Thread(new WindTurbineControlImpl(publisher, measurere))).start();    
+        (new Thread(new WindTurbineControlImpl(publisher, measurere))).start();   
+        
+        for(;;);
 
     }
 }

@@ -1,7 +1,7 @@
 package com.onk.grp2.Environment.main;
 
 import com.onk.grp2.Common.utilities.EnvironmentPublisher;
-import com.onk.grp2.Common.utilities.EnvironmentSubscriber;
+import com.onk.grp2.Evironment.control.EnvironmentControlImpl;
 
 public class EnvironmentMain {
 	public static void main(String[] args) {
@@ -14,10 +14,10 @@ public class EnvironmentMain {
         
         EnvironmentPublisher publisher = EnvironmentPublisher.INSTANCE;        
         publisher.Initialize(domainId, "EnvironmentStatus");
-        EnvironmentSubscriber subscriber = EnvironmentSubscriber.INSTANCE;
-        subscriber.Initialize("WindTurbineStatus", domainId);
         
-        (new Thread(new EnvironmentControlImpl(publisher, subscriber))).start();    
+        (new Thread(new EnvironmentControlImpl(publisher))).start();  
+        
+        for(;;);
 
     }
 }

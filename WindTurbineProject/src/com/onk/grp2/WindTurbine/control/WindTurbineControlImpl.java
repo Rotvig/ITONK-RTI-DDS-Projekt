@@ -24,6 +24,7 @@ public class WindTurbineControlImpl implements WindTurbineControl {
 	@Override
 	public void run() {
 		measurere.addWindTurbineEventListener(this);
+		for(;;);
 	}
 
 	@Override
