@@ -42,7 +42,7 @@ public enum EnvironmentMeasurereImpl implements EnvironmentMeasurere,
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		status.windSpeed += 9;
-		status.windDirection += 90 % 360;
+		status.windDirection = (status.windDirection + 90) % 360;
 		
 		for (EnvironmentEvent environmentEvent : environmentEventListeners) {
 			environmentEvent.SendEvent(status);
