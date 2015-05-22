@@ -78,7 +78,6 @@ public enum EnvironmentSubscriber implements Closeable {
 				listener, StatusKind.STATUS_MASK_ALL);
 	}
 
-	// TODO data listener
 	private static class Listener extends DataReaderAdapter {
 		EnvironmentSeq dataSeq = new EnvironmentSeq();
 		SampleInfoSeq infoSeq = new SampleInfoSeq();
