@@ -2,6 +2,7 @@ package com.onk.grp2.WindTurbine.main;
 
 import com.onk.grp2.Common.utilities.EnvironmentSubscriber;
 import com.onk.grp2.Common.utilities.WindTurbinePublisher;
+import com.onk.grp2.WindTurbine.control.WindTurbineControl;
 import com.onk.grp2.WindTurbine.control.WindTurbineControlImpl;
 import com.onk.grp2.WindTurbine.driver.WindTurbineMeasurere;
 import com.onk.grp2.WindTurbine.driver.WindTurbineMeasurereImpl;
@@ -20,7 +21,8 @@ public class WindTurbineMain {
         EnvironmentSubscriber subscriber = EnvironmentSubscriber.INSTANCE;
         WindTurbineMeasurere measurere = WindTurbineMeasurereImpl.INSTANCE;
         subscriber.Initialize("EnvironmentStatus", domainId, measurere);
-        (new Thread(new WindTurbineControlImpl(publisher, measurere))).start();   
+        WindTurbineControl controller =  new WindTurbineControlImpl(publisher, measurere);
+        controller.run();
         
         for(;;);
 
