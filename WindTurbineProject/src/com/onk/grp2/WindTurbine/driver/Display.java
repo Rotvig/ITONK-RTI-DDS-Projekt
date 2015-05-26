@@ -1,26 +1,9 @@
 package com.onk.grp2.WindTurbine.driver;
 
-import jssc.SerialPortException;
-import jssc.SerialPortTimeoutException;
+public interface Display {
 
-import com.darkprograms.picasoserial.LCD;
-import com.darkprograms.picasoserial.screengraphics.TextAndString;
+	public abstract void clear();
 
-public class Display {
-	private LCD lcd = new LCD("/dev/ttyAMA0");
-	
-	public Display()  {
-	
-			TextAndString textAndString = lcd.textAndString();
-			
-			try{
-				textAndString.putString("Hello World");
-			} catch(SerialPortException e) {
-				
-			} catch (SerialPortTimeoutException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-	}
+	public abstract void putText(String text);
 
 }

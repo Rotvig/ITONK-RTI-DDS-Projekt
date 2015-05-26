@@ -5,6 +5,7 @@ import com.onk.grp2.Common.utilities.WindTurbinePublisher;
 import com.onk.grp2.WindTurbine.control.WindTurbineControl;
 import com.onk.grp2.WindTurbine.control.WindTurbineControlImpl;
 import com.onk.grp2.WindTurbine.driver.Display;
+import com.onk.grp2.WindTurbine.driver.FourDSystemsLCD;
 import com.onk.grp2.WindTurbine.driver.WindTurbineMeasurere;
 import com.onk.grp2.WindTurbine.driver.WindTurbineMeasurereImpl;
 
@@ -22,10 +23,8 @@ public class WindTurbineMain {
         EnvironmentSubscriber subscriber = EnvironmentSubscriber.INSTANCE;
         WindTurbineMeasurere measurere = WindTurbineMeasurereImpl.INSTANCE;
         subscriber.Initialize("EnvironmentStatus", domainId, measurere);
-        WindTurbineControl controller =  new WindTurbineControlImpl(publisher, measurere);
+        WindTurbineControl controller =  new WindTurbineControlImpl(publisher, measurere, new FourDSystemsLCD());
         controller.run();
-        
-        Display display = new Display();
         
         for(;;);
 

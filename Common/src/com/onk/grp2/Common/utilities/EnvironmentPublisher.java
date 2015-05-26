@@ -12,6 +12,16 @@ import com.rti.dds.infrastructure.InstanceHandle_t;
 import com.rti.dds.infrastructure.StatusKind;
 import com.rti.dds.topic.Topic;
 
+/**
+ * The class is used as a wrapper for setting up a publisher for RTI NDDS
+ *
+ * The class is created as a singleton to minimize mistakes concerning wrong
+ * ID's or topic names
+ *
+ * @author Sune Monrad
+ *
+ */
+
 public enum EnvironmentPublisher implements Closeable {
 	INSTANCE;
 
@@ -24,6 +34,14 @@ public enum EnvironmentPublisher implements Closeable {
 	private EnvironmentPublisher() {
 
 	}
+
+	/**
+	 * initialization is only possible once to ensure a valid state
+	 * 
+	 * @param domainId
+	 * @param topicName
+	 * 
+	 */
 
 	public void Initialize(int domainId, String topicName) {
 		if (!initialized) {
@@ -73,6 +91,13 @@ public enum EnvironmentPublisher implements Closeable {
 
 	}
 
+	/**
+	 * Used to send environment status to subscribers.
+	 * 
+	 * The Initialize method has to have been called before calling this method.
+	 * 
+	 * @param EnvironmentStatus
+	 */
 	public void notify(Environment EnvironmentStatus) {
 		if (initialized) {
 			InstanceHandle_t instanceHandle = InstanceHandle_t.HANDLE_NIL;
