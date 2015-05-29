@@ -5,6 +5,6 @@ import com.onk.grp2.WindTurbine.control.WindTurbineEvent;
 
 public interface WindTurbineMeasurere extends EnvironmentReceiver {
 	public void addWindTurbineEventListener(WindTurbineEvent event);
-	public void run();
+	public void run(int id);
 
 }

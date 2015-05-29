@@ -39,9 +39,9 @@ public enum WindTurbineMeasurereImpl implements WindTurbineMeasurere {
 	}
 
 	@Override
-	public void run() {
+	public void run(int id) {
 		status.bladePitch = (float) 0.0;
-		status.id = 0;
+		status.id = id;
 		status.orientation = (float) 0.0;
 		status.production = (float) 0.0;
 		status.RPM = (float) 0.0;
